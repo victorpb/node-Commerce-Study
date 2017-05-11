@@ -13,6 +13,8 @@ module.exports =  (app) => {
     app.set('layout extractStyles', true)
 
     app.use(express.static(path.join(__dirname, './../../../build')))
+    app.use(express.static(path.join(__dirname, './../../../bower_components')))
+    
     app.use(expressEjsLayouts)
     app.use(bodyParser.json())
     app.use(bodyParser.urlencoded({extended: false}))
