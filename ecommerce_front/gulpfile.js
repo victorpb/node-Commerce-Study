@@ -57,7 +57,7 @@ gulp.task('build-css', () =>{
 
 gulp.task('build-js', () =>{
     return gulp
-            .src(path.htmlSrc.concat('**/*.js'))
+            .src(path.jsSrc.concat('*.js'))
             .pipe(plumber({ errorHandler:onError }))
             .pipe(changed(path.buildDir.concat('/js')))
             .pipe(gulp.dest(path.buildDir.concat('/js')))
