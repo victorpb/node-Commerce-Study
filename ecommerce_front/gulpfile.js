@@ -8,10 +8,9 @@ const plumber = require('gulp-plumber')
 const changed = require('gulp-changed')
 
 const path = {
-    htmlSrc: 'src/views',
-    sassSrc: 'public/scss',
-    jsSrc: 'public/js',
-
+    htmlSrc: 'src/views/',
+    sassSrc: 'public/scss/',
+    jsSrc: 'public/js/',
     buildDir: 'build/',
 }
 
@@ -30,7 +29,7 @@ let initServer = () =>{
     .on('restart', () =>{
         gulp.src('app.js')
             .pipe(livereload())
-            pip(notify('Reloading... ;)'))   
+            .pipe(notify('Reloading... ;)'))   
     })
 }
 

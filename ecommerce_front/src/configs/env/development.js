@@ -1,4 +1,5 @@
 const path = require('path')
+const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
@@ -11,6 +12,7 @@ module.exports =  (app) => {
     app.set('layout extractScripts', true)
     app.set('layout extractStyles', true)
 
+    app.use(express.static(path.join(__dirname, './../../../build')))
     app.use(expressEjsLayouts)
     app.use(bodyParser.json())
     app.use(bodyParser.urlencoded({extended: false}))
