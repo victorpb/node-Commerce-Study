@@ -1,0 +1,25 @@
+{
+  "name": "nodecommerce",
+  "description": "ecommerce based node.js",
+  "main": "app.js",
+  "authors": [
+    "Victor Pereira"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ecommerce",
+    "node.js"
+  ],
+  "homepage": "https://github.com/victorpb/nodeComerce",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
