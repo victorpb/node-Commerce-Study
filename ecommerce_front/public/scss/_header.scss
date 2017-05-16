@@ -7,9 +7,12 @@
     .logo{
         padding: 4rem 0;
         z-index: 3;
+        img{
+            width: 13em;
+        }
     }
     .account{
-        padding: 4rem 0;
+        padding: 7rem 0 0 0;
         z-index: 3;
         .shopping{
             border-left: 1px solid $red-dark-default;
