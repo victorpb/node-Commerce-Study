@@ -11,6 +11,7 @@ const path = {
     htmlSrc: 'src/views/',
     sassSrc: 'public/scss/',
     jsSrc: 'public/js/',
+    imgSrc: 'public/images/',
     buildDir: 'build/',
 }
 
@@ -64,7 +65,15 @@ gulp.task('build-js', () =>{
             .pipe(livereload())
 })
 
-gulp.task('build', ['build-html', 'build-js', 'build-css'],() =>{
+gulp.task('build-images', () => {
+    return gulp
+            .src(path.imgSrc.concat('**/*.+(png|jpeg|jpg|gif|svg)'))
+            .pipe(changed(path.buildDir.concat('/images')))
+            .pipe(gulp.dest(path.buildDir.concat('/images')))
+            .pipe(livereload())
+})
+
+gulp.task('build', ['build-html', 'build-js', 'build-css', 'build-images'],() =>{
     return initServer()
 })
 gulp.task('watch', ()=>{
