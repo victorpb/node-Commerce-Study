@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.get('/', (req, res) =>{
     return res.render('main/index', {
-        title:'Its Live',
+        title:'Node Commerce',
         layout: 'layouts/base'
     })
 })
