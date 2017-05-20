@@ -3,19 +3,44 @@
 
     .category {
         .list-group {
-            border-right: 1px solid #ececec;
+            border-right: 1px solid $color-bord-default;
             .list-group-item{
                 &:first-child{
                     border: 0;
                 }
                 border: 0;
-                border-top: 1px solid #ececec;
+                border-top: 1px solid $color-bord-default;
                 a{
                     color: $font-color-default;
                     text-transform: capitalize;
                     &:hover, &:active{
                         color: $red-dark-default;
                         text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .list_pro {
+        .products_item {
+            margin: 1.3em 0;
+            .preview{
+                position: relative;
+                img{
+                    max-height: 13em;
+                    min-height: 13em;
+                }
+            }
+
+            .info{
+                text-align: center;
+                border: 1px solid $color-bord-default;
+                padding: 1em;
+                .price{
+                    position: relative;
+                    strong{
+                        padding: 1em 0;
+                        display: block;
                     }
                 }
             }
