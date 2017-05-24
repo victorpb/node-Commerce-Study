@@ -24,6 +24,16 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
+.btn-red-dark-default{
+    background-color: $red-dark-default;
+    color: $white-default;
+    &:hover, &:active{
+        background-color: $red-default;
+        color: $white-default;
+        transition: .3s all;
+    }
+}
+
 .upper{
     text-transform: uppercase !important;
 }
@@ -32,10 +42,22 @@ h1, h2, h3, h4, h5, h6{
     font-size: 1.5em;
 }
 
+.subtitle {
+    padding: 0 0 1em 0;
+    display: block;
+}
+
 .bold{
         font-weight: bold;
     }
 
 .block{
     display: block;
+}
+
+.form-control {
+    &:focus, &:active, &:hover{
+        box-shadow: none;
+        border-color: $font-color-default
+    }
 }
